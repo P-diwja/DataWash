@@ -1,0 +1,309 @@
+OrderID,Date,Region,Category,Sales,Quantity,CustomerName
+1000,2024-11-23,South,Clothing,$574.51,4,Customer 0
+1001,2024-10-06,North,Electronics,$479.26,17,Customer 1
+1002,2024-10-14,north,Furniture,$597.15,19,Customer 2
+1003,2024-01-04,West,Grocery,$728.45,7,Customer 3
+1004,2024-06-21,East,Grocery,464.88,2,Customer 4
+1005,2024-10-01,North,Grocery,464.88,20,Customer 5
+1006,2024-07-04,North,Clothing,736.88,3,Customer 6
+1007,2024-02-21,EAST,Grocery,$615.12,12,Customer 7
+1008,2024-05-16,North,Clothing,429.58,8,  Customer 8  
+1009,2024-07-13, South ,Clothing,581.38,2,Customer 9
+1010,2024-01-17,North,Clothing,430.49,19,Customer 10
+1011,2024-06-10, South ,Furniture,$430.14,5,Customer 11
+1012,2024-10-14,West,Furniture,536.29,5,Customer 12
+1013,2024-02-16,South,Clothing,213.01,14,Customer 13
+1014,2024-07-16,north,Grocery,241.26,1,Customer 14
+1015,2024-02-28,East,Grocery,$415.66,14,  Customer 15  
+1016,2024-01-02,East,Clothing,348.08,4,Customer 16
+1017,2024-06-01,South,Clothing,547.14,6,Customer 17
+1018,2024-09-28,West,Electronics,$363.8,12,Customer 18
+1019,2024-06-06,north,Electronics,$288.15,16,Customer 19
+1020,2024-09-29,West,Clothing,$719.85,20,Customer 20
+1021,2024-04-18, South ,Clothing,466.13,13,Customer 21
+1022,2024-11-28,West,Electronics,$510.13,3,Customer 22
+1023,2024-10-28,North,Electronics,286.29,2,Customer 23
+1024,2024-01-17,South,Grocery,418.34,7,Customer 24
+1025,2024-10-19,West,Furniture,$516.64,4,Customer 25
+1026,2024-06-30, South ,Electronics,327.35,4,  Customer 26  
+1027,2024-06-22,South,Clothing,556.35,5,Customer 27
+1028,2024-05-22,North,Furniture,409.9,18,  Customer 28  
+1029,2024-11-29,North,Clothing,$456.25,16,Customer 29
+1030,2024-07-24,North,Furniture,$409.74,15,Customer 30
+1031,2024-12-22,north,Furniture,$777.84,10,Customer 31
+1032,2024-01-30, South ,Grocery,$497.98,19,Customer 32
+1033,2024-09-28,North,Clothing,$341.34,3,Customer 33
+1034,2024-04-30,north,Clothing,623.38,2,Customer 34
+1035,2024-08-02,East,Grocery,$316.87,11,Customer 35
+1036,2024-07-21,West,Grocery,531.33,3,  Customer 36  
+1037,2024-11-14,North,Clothing,206.05,5,Customer 37
+1038,2024-02-05,South,Furniture,300.77,10,Customer 38
+1039,2024-11-30,north,Grocery,529.53,4,Customer 39
+1040,2024-03-09, South ,Clothing,$610.77,20,Customer 40
+1041,2024-06-24,East,Furniture,$525.71,2,  Customer 41  
+1042,2024-08-04,East,Clothing,,9,  Customer 42  
+1043,2024-08-14,North,Electronics,$454.83,5,Customer 43
+1044,2024-07-08,South,Electronics,278.22,2,Customer 44
+1045,2024-04-17,East,Furniture,392.02,5,Customer 45
+1046,2024-05-01,EAST,Clothing,430.9,1,  Customer 46  
+1047,2024-06-19, South ,Clothing,$658.57,4,Customer 47
+1048,2024-01-20,EAST,Furniture,551.54,8,Customer 48
+1049,2024-12-03,EAST,Electronics,235.54,9,Customer 49
+1050,2024-09-17,north,Grocery,548.61,4,Customer 0
+1051,2024-05-13,East,Electronics,$442.24,14,Customer 1
+1052,2024-06-09,North,Furniture,398.46,7,Customer 2
+1053,2024-12-28,EAST,Clothing,591.75,3,Customer 3
+1054,2024-06-18,North,Grocery,654.65,14,Customer 4
+1055,2024-12-22,West,Furniture,639.69,6,Customer 5
+1056,2024-06-03,East,Grocery,$374.12,19,Customer 6
+1057,2024-06-13,South,Furniture,453.62,6,Customer 7
+1058,2024-05-25,East,Electronics,549.69,8,Customer 8
+1059,2024-04-25,North,Clothing,646.33,20,Customer 9
+1060,2024-02-07,north,Clothing,428.12,13,Customer 10
+1061,2024-05-04,EAST,Electronics,472.15,8,  Customer 11  
+1062,2024-12-22,South,Electronics,334.05,15,Customer 12
+1063,2024-10-13,West,Furniture,320.57,18,Customer 13
+1064,2024-03-22,East,Clothing,621.88,9,Customer 14
+1065,2024-09-23,West,Electronics,703.44,8,Customer 15
+1066,2024-06-12,South,Clothing,489.2,5,Customer 16
+1067,2024-02-02,West,Furniture,$650.53,14,Customer 17
+1068,2024-10-26,EAST,Furniture,,16,  Customer 18  
+1069,2024-06-29,EAST,Furniture,403.23,18,Customer 19
+1070,2024-04-22,West,Electronics,554.21,13,Customer 20
+1071,2024-08-27,north,Electronics,730.71,19,Customer 21
+1072,2024-01-14,EAST,Furniture,$494.63,9,Customer 22
+1073,2024-04-18,West,Grocery,734.7,14,Customer 23
+1074,2024-02-11,North,Grocery,$107.04,3,Customer 24
+1075,2024-11-29,South,Clothing,,1,Customer 25
+1076,2024-05-02,north,Clothing,513.06,9,Customer 26
+1077,2024-03-26, South ,Electronics,455.15,6,Customer 27
+1078,2024-02-25,north,Furniture,513.76,7,  Customer 28  
+1079,2024-12-19, South ,Grocery,201.86,20,Customer 29
+1080,2024-10-16,West,Grocery,$467.05,11,  Customer 30  
+1081,2024-08-03,East,Furniture,553.57,14,  Customer 31  
+1082,2024-09-24,EAST,Furniture,721.68,19,Customer 32
+1083,2024-05-05,West,Clothing,422.26,19,Customer 33
+1084,2024-07-13,East,Clothing,378.73,12,Customer 34
+1085,2024-06-23,East,Electronics,424.74,7,  Customer 35  
+1086,2024-07-27, South ,Furniture,637.31,16,Customer 36
+1087,2024-01-09, South ,Clothing,549.31,19,Customer 37
+1088,2024-10-10, South ,Grocery,420.54,15,Customer 38
+1089,2024-05-08,East,Electronics,576.99,6,  Customer 39  
+1090,2024-09-04,EAST,Grocery,514.56,7,Customer 40
+1091,2024-07-03,north,Clothing,,9,  Customer 41  
+1092,2024-01-28,South,Furniture,$394.69,1,Customer 42
+1093,2024-08-28,North,Grocery,450.85,16,  Customer 43  
+1094,2024-02-03, South ,Electronics,$441.18,19,Customer 44
+1095,2024-02-13,EAST,Furniture,280.47,20,Customer 45
+1096,2024-09-24,East,Furniture,544.42,20,  Customer 46  
+1097,2024-02-20,South,Grocery,539.16,6,Customer 47
+1098,2024-10-09,West,Furniture,,10,  Customer 48  
+1099,2024-05-27,West,Electronics,464.81,9,Customer 49
+1100,2024-11-16,South,Furniture,$287.69,8,Customer 0
+1101,2024-05-16,South,Grocery,436.9,19,Customer 1
+1102,2024-08-12, South ,Furniture,448.59,17,Customer 2
+1103,2024-08-12,West,Grocery,,20,Customer 3
+1104,2024-02-16,EAST,Electronics,475.81,9,Customer 4
+1105,2024-03-30,East,Clothing,560.61,14,Customer 5
+1106,2024-09-08,West,Grocery,782.93,4,Customer 6
+1107,2024-06-17, South ,Furniture,526.19,18,  Customer 7  
+1108,2024-02-15,EAST,Furniture,538.63,1,Customer 8
+1109,2024-10-04,north,Grocery,488.83,16,Customer 9
+1110,2024-01-27,East,Furniture,212.18,16,  Customer 10  
+1111,2024-11-18,South,Grocery,496.02,18,Customer 11
+1112,2024-04-25,West,Electronics,509.03,5,Customer 12
+1113,2024-05-29,EAST,Furniture,869.49,8,Customer 13
+1114,2024-03-15,north,Clothing,471.15,9,Customer 14
+1115,2024-07-31,East,Electronics,$545.23,10,Customer 15
+1116,2024-10-23,South,Furniture,494.79,12,Customer 16
+1117,2024-10-05,EAST,Clothing,324.7,8,Customer 17
+1118,2024-04-29,East,Furniture,671.42,13,Customer 18
+1119,2024-12-05,South,Furniture,612.79,5,Customer 19
+1120,2024-10-29,EAST,Furniture,$618.65,15,  Customer 20  
+1121,2024-03-14,South,Electronics,363.59,9,Customer 21
+1122,2024-12-20,East,Furniture,710.42,16,Customer 22
+1123,2024-01-19, South ,Grocery,289.72,3,Customer 23
+1124,2024-02-20,North,Furniture,$588.03,10,Customer 24
+1125,2024-01-24,East,Grocery,828.57,8,Customer 25
+1126,2024-10-16,South,Electronics,351.42,13,Customer 26
+1127,2024-05-03,South,Furniture,415.06,15,Customer 27
+1128,2024-01-05,East,Clothing,$514.95,12,Customer 28
+1129,2024-06-02,East,Furniture,424.48,7,Customer 29
+1130,2024-09-04,East,Grocery,267.4,10,  Customer 30  
+1131,2024-12-03,EAST,Electronics,,20,Customer 31
+1132,2024-05-26,EAST,Grocery,$340.65,7,Customer 32
+1133,2024-12-13, South ,Clothing,571.04,2,Customer 33
+1134,2024-08-13,South,Electronics,362.09,11,Customer 34
+1135,2024-03-30,East,Grocery,732.49,9,Customer 35
+1136,2024-09-03,EAST,Grocery,382.51,15,Customer 36
+1137,2024-03-13, South ,Furniture,451.69,18,Customer 37
+1138,2024-07-21,West,Grocery,7451.67,9,Customer 38
+1139,2024-11-22,South,Furniture,$315.37,18,Customer 39
+1140,2024-11-08,EAST,Furniture,704.58,10,Customer 40
+1141,2024-02-29,East,Furniture,$880.87,8,Customer 41
+1142,2024-03-10, South ,Furniture,451.33,5,Customer 42
+1143,2024-12-01,West,Grocery,$469.12,12,Customer 43
+1144,2024-08-15,North,Grocery,283.99,12,  Customer 44  
+1145,2024-05-21,EAST,Furniture,$678.61,7,Customer 45
+1146,2024-11-01,East,Clothing,694.91,19,Customer 46
+1147,2024-10-10,EAST,Clothing,369.93,5,Customer 47
+1148,2024-11-01,South,Clothing,5252.42,6,  Customer 48  
+1149,2024-01-14,EAST,Clothing,682.56,1,  Customer 49  
+1150,2024-01-27,North,Electronics,543.96,12,Customer 0
+1151,2024-02-25,north,Electronics,392.85,17,Customer 1
+1152,2024-11-25,West,Furniture,779.87,4,Customer 2
+1153,2024-08-15,north,Clothing,$571.07,9,Customer 3
+1154,2024-10-26,north,Grocery,321.3,20,Customer 4
+1155,2024-12-25,EAST,Clothing,598.48,8,Customer 5
+1156,2024-08-20,East,Furniture,353.8,9,Customer 6
+1157,2024-03-19,North,Electronics,$618.06,4,Customer 7
+1158,2024-07-09,north,Grocery,673.79,14,Customer 8
+1159,2024-12-06, South ,Electronics,376.9,20,Customer 9
+1160,2024-02-23, South ,Furniture,$644.51,4,Customer 10
+1161,2024-10-11,north,Clothing,561.92,18,Customer 11
+1162,2024-11-14,North,Grocery,$623.31,9,Customer 12
+1163,2024-06-07,South,Clothing,784.52,13,  Customer 13  
+1164,2024-11-20,north,Clothing,463.19,15,Customer 14
+1165,2024-07-08,north,Electronics,386.94,5,  Customer 15  
+1166,2024-11-12,West,Furniture,366.57,15,Customer 16
+1167,2024-04-20,West,Electronics,$377.63,19,Customer 17
+1168,2024-12-07,north,Electronics,$488.43,10,Customer 18
+1169,2024-03-11,North,Electronics,551.17,14,  Customer 19  
+1170,2024-07-13,north,Grocery,$541.5,2,Customer 20
+1171,2024-08-23,north,Furniture,624.08,14,Customer 21
+1172,2024-07-26,EAST,Furniture,6730.71,12,  Customer 22  
+1173,2024-02-24,north,Electronics,718.03,10,Customer 23
+1174,2024-04-23,north,Electronics,289.04,7,Customer 24
+1175,2024-06-27, South ,Clothing,$494.82,5,Customer 25
+1176,2024-03-29, South ,Electronics,$355.55,16,Customer 26
+1177,2024-10-15,north,Grocery,646.58,11,  Customer 27  
+1178,2024-02-04,EAST,Grocery,506.3,12,Customer 28
+1179,2024-06-07,East,Grocery,,3,Customer 29
+1180,2024-02-16,West,Electronics,481.38,19,Customer 30
+1181,2024-06-13,North,Furniture,$611.05,11,Customer 31
+1182,2024-02-13,South,Furniture,432.13,17,Customer 32
+1183,2024-03-22,West,Furniture,616.56,20,  Customer 33  
+1184,2024-11-19,North,Furniture,$656.84,20,Customer 34
+1185,2024-06-19,East,Grocery,448.68,13,  Customer 35  
+1186,2024-12-28,West,Grocery,361.09,17,  Customer 36  
+1187,2024-12-09,East,Grocery,$423.06,7,Customer 37
+1188,2024-09-05,South,Electronics,$606.52,4,Customer 38
+1189,2024-10-03,North,Grocery,513.87,20,  Customer 39  
+1190,2024-07-11, South ,Clothing,594.51,2,Customer 40
+1191,2024-12-12,north,Grocery,764.44,15,Customer 41
+1192,2024-05-02,West,Clothing,534.64,19,Customer 42
+1193,2024-08-24,north,Furniture,378.66,7,Customer 43
+1194,2024-03-11,West,Grocery,658.61,4,Customer 44
+1195,2024-09-21,EAST,Clothing,$507.7,17,  Customer 45  
+1196,2024-08-11,EAST,Furniture,630.87,1,Customer 46
+1197,2024-07-21,North,Grocery,$659.93,11,Customer 47
+1198,2024-11-28,North,Grocery,356.15,16,Customer 48
+1199,2024-03-12,north,Electronics,707.3,1,Customer 49
+1200,2024-03-17,north,Furniture,$635.77,10,Customer 0
+1201,2024-03-03,EAST,Furniture,$409.41,16,Customer 1
+1202,2024-01-09, South ,Clothing,$545.67,1,Customer 2
+1203,2024-05-03, South ,Electronics,538.58,12,  Customer 3  
+1204,2024-09-26,north,Electronics,503.59,16,  Customer 4  
+1205,2024-07-17,North,Grocery,630.79,12,Customer 5
+1206,2024-12-02, South ,Grocery,$715.6,12,Customer 6
+1207,2024-11-25,West,Furniture,501.1,5,  Customer 7  
+1208,2024-08-22,EAST,Clothing,699.63,11,Customer 8
+1209,2024-09-20,West,Grocery,$648.23,7,Customer 9
+1210,2024-01-25,North,Grocery,534.84,13,Customer 10
+1211,2024-07-16, South ,Furniture,526.43,17,Customer 11
+1212,2024-02-12,north,Clothing,327.12,11,  Customer 12  
+1213,2024-06-16,north,Furniture,$274.88,15,Customer 13
+1214,2024-01-22,north,Furniture,$524.75,2,  Customer 14  
+1215,2024-11-22, South ,Clothing,371.61,5,Customer 15
+1216,2024-12-13,North,Clothing,,12,Customer 16
+1217,2024-10-17,West,Grocery,419.8,3,Customer 17
+1218,2024-09-28,East,Clothing,231.73,1,Customer 18
+1219,2024-09-12,North,Grocery,553.6,15,Customer 19
+1220,2024-11-09,West,Clothing,$437.82,3,Customer 20
+1221,2024-08-15,EAST,Grocery,512.03,3,Customer 21
+1222,2024-05-28, South ,Clothing,366.03,17,Customer 22
+1223,2024-04-12,West,Electronics,449.78,19,Customer 23
+1224,2024-10-09,North,Grocery,734.06,16,Customer 24
+1225,2024-07-28,East,Electronics,519.28,17,Customer 25
+1226,2024-10-09,South,Furniture,582.44,2,Customer 26
+1227,2024-09-22,East,Clothing,309.37,17,Customer 27
+1228,2024-02-10,north,Grocery,$858.36,10,Customer 28
+1229,2024-02-17,north,Clothing,$776.51,20,Customer 29
+1230,2024-11-05,North,Electronics,$704.52,19,Customer 30
+1231,2024-04-17, South ,Electronics,624.31,18,Customer 31
+1232,2024-06-03, South ,Furniture,$502.27,3,Customer 32
+1233,2024-03-21,South,Grocery,566.31,11,Customer 33
+1234,2024-06-12,West,Clothing,657.2,17,Customer 34
+1235,2024-06-12,West,Clothing,$405.71,2,Customer 35
+1236,2024-07-15,EAST,Clothing,433.33,19,Customer 36
+1237,2024-04-07,north,Furniture,249.63,10,Customer 37
+1238,2024-02-16,South,Clothing,384.23,2,  Customer 38  
+1239,2024-09-10, South ,Furniture,$749.2,1,Customer 39
+1240,2024-08-08,East,Furniture,449.86,13,  Customer 40  
+1241,2024-10-14,North,Furniture,452.32,18,Customer 41
+1242,2024-11-15,North,Furniture,547.67,11,Customer 42
+1243,2024-07-06,north,Furniture,258.17,2,  Customer 43  
+1244,2024-06-19,South,Clothing,641.81,20,Customer 44
+1245,2024-07-20,East,Grocery,689.96,17,Customer 45
+1246,2024-12-28,North,Grocery,556.59,4,Customer 46
+1247,2024-10-25,EAST,Electronics,747.7,9,Customer 47
+1248,2024-10-23,north,Furniture,$300.98,20,Customer 48
+1249,2024-07-13,North,Electronics,$776.56,15,Customer 49
+1250,2024-03-18,north,Furniture,390.39,2,Customer 0
+1251,2024-09-22, South ,Furniture,308.01,11,Customer 1
+1252,2024-08-23,East,Grocery,464.39,7,Customer 2
+1253,2024-05-22,East,Grocery,780.8,16,Customer 3
+1254,2024-06-27, South ,Grocery,$497.08,19,Customer 4
+1255,2024-07-13,East,Clothing,$360.11,10,Customer 5
+1256,2024-02-10,East,Furniture,$305.76,18,Customer 6
+1257,2024-10-14,north,Clothing,$484.23,17,Customer 7
+1258,2024-04-29, South ,Furniture,$200.76,5,  Customer 8  
+1259,2024-10-08, South ,Furniture,304.97,7,Customer 9
+1260,2024-05-27,EAST,Electronics,731.46,8,Customer 10
+1261,2024-01-20,EAST,Clothing,698.49,2,Customer 11
+1262,2024-07-22, South ,Grocery,480.74,1,Customer 12
+1263,2024-11-04,East,Furniture,430.15,18,Customer 13
+1264,2024-03-09,South,Electronics,508.78,15,Customer 14
+1265,2024-04-05,East,Clothing,$7569.47,13,Customer 15
+1266,2024-09-20,North,Clothing,352.77,16,Customer 16
+1267,2024-05-07,West,Grocery,5211.71,10,Customer 17
+1268,2024-10-20, South ,Clothing,$6757.33,4,Customer 18
+1269,2024-03-22, South ,Grocery,509.13,10,Customer 19
+1270,2024-04-23,South,Furniture,517.03,20,Customer 20
+1271,2024-12-25,north,Clothing,599.32,20,Customer 21
+1272,2024-02-11,East,Electronics,737.9,4,  Customer 22  
+1273,2024-10-07,north,Clothing,$314.33,17,Customer 23
+1274,2024-12-14,North,Furniture,819.96,15,  Customer 24  
+1275,2024-07-31,West,Grocery,207.19,13,Customer 25
+1276,2024-01-02,North,Furniture,477.23,3,Customer 26
+1277,2024-01-31,West,Electronics,$588.25,6,Customer 27
+1278,2024-11-24,West,Grocery,542.15,13,Customer 28
+1279,2024-07-12, South ,Clothing,406.6,12,  Customer 29  
+1280,2024-10-02,South,Electronics,468.78,10,Customer 30
+1281,2024-10-05,South,Clothing,426.05,5,Customer 31
+1282,2024-02-27,north,Electronics,$411.6,3,  Customer 32  
+1283,2024-01-18,EAST,Electronics,$627.44,2,Customer 33
+1284,2024-04-29,EAST,Electronics,$553.55,10,Customer 34
+1285,2024-10-21, South ,Grocery,$396.06,5,Customer 35
+1286,2024-09-23,North,Clothing,634.94,14,Customer 36
+1287,2024-01-25, South ,Furniture,546.09,11,Customer 37
+1288,2024-07-28,EAST,Furniture,$621.93,8,Customer 38
+1289,2024-12-28,North,Furniture,594.44,18,Customer 39
+1290,2024-07-17, South ,Electronics,375.65,12,  Customer 40  
+1291,2024-04-07,north,Electronics,415.97,7,Customer 41
+1292,2024-10-27,West,Clothing,612.09,11,Customer 42
+1293,2024-01-08, South ,Electronics,591.56,16,Customer 43
+1294,2024-12-22,South,Grocery,496.86,13,Customer 44
+1295,2024-11-28,north,Furniture,517.6,16,Customer 45
+1296,2024-06-12,West,Electronics,691.65,8,Customer 46
+1297,2024-01-09,north,Furniture,$411.26,7,Customer 47
+1298,2024-07-13,north,Grocery,$582.06,16,Customer 48
+1299,2024-11-24, South ,Grocery,$469.67,18,Customer 49
+1189,2024-10-03,North,Grocery,513.87,20,  Customer 39  
+1123,2024-01-19, South ,Grocery,289.72,3,Customer 23
+1185,2024-06-19,East,Grocery,448.68,13,  Customer 35  
+1213,2024-06-16,north,Furniture,$274.88,15,Customer 13
+1106,2024-09-08,West,Grocery,782.93,4,Customer 6
+1127,2024-05-03,South,Furniture,415.06,15,Customer 27
+1176,2024-03-29, South ,Electronics,$355.55,16,Customer 26
+1073,2024-04-18,West,Grocery,734.7,14,Customer 23
