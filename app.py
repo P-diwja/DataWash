@@ -197,6 +197,36 @@ st.markdown("""
         div[data-baseweb="select"] > div:focus-within { border-color: #1B8A7A; box-shadow: 0 0 0 1px #1B8A7A; }
 
         div[data-testid="stAlert"] { border-radius: 10px; box-shadow: 0 1px 4px rgba(16,25,46,0.04); }
+
+        /* ---------- FILE UPLOADER (drag-and-drop box) ----------
+           This widget renders its own dark dropzone by default and was not
+           covered by the earlier text-color fix, leaving "Browse files" and
+           the size/type caption invisible (dark text on a dark box). Force
+           it to match the rest of the app's light card style. */
+        [data-testid="stFileUploaderDropzone"] {
+            background-color: #FFFFFF !important;
+            border: 1px dashed #E9E7E0 !important;
+            border-radius: 10px !important;
+        }
+        [data-testid="stFileUploaderDropzone"] * {
+            color: #10192E !important;
+        }
+        [data-testid="stFileUploaderDropzone"] svg {
+            fill: #5B6478 !important;
+        }
+        [data-testid="stFileUploaderDropzone"] button,
+        [data-testid="stFileUploaderDropzone"] button * {
+            background-color: #10192E !important;
+            color: #FFFFFF !important;
+            border: none !important;
+        }
+        [data-testid="stFileUploaderDropzone"] button:hover {
+            background-color: #1B8A7A !important;
+        }
+        [data-testid="stFileUploaderFileName"],
+        [data-testid="stFileUploaderFileName"] * {
+            color: #10192E !important;
+        }
     </style>
 """, unsafe_allow_html=True)
 
