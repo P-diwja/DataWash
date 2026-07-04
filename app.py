@@ -215,13 +215,19 @@ st.markdown("""
             fill: #5B6478 !important;
         }
         [data-testid="stFileUploaderDropzone"] button,
-        [data-testid="stFileUploaderDropzone"] button * {
+        [data-testid="stFileUploaderDropzone"] button * ,
+        [data-testid="stFileUploaderDropzone"] button svg {
             background-color: #10192E !important;
             color: #FFFFFF !important;
+            fill: #FFFFFF !important;
             border: none !important;
         }
-        [data-testid="stFileUploaderDropzone"] button:hover {
+        [data-testid="stFileUploaderDropzone"] button:hover,
+        [data-testid="stFileUploaderDropzone"] button:hover * ,
+        [data-testid="stFileUploaderDropzone"] button:hover svg {
             background-color: #1B8A7A !important;
+            color: #FFFFFF !important;
+            fill: #FFFFFF !important;
         }
         [data-testid="stFileUploaderFileName"],
         [data-testid="stFileUploaderFileName"] * {
