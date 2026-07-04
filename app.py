@@ -196,6 +196,22 @@ st.markdown("""
         div[data-baseweb="select"] > div { border-radius: 8px; border-color: #E9E7E0; }
         div[data-baseweb="select"] > div:focus-within { border-color: #1B8A7A; box-shadow: 0 0 0 1px #1B8A7A; }
 
+        /* Dropdown option lists (selectbox/multiselect) render in an overlay
+           outside the main app container, so the .stApp-scoped rules above
+           never reach them. Force them explicitly here. */
+        div[data-baseweb="popover"],
+        ul[data-baseweb="menu"] {
+            background-color: #FFFFFF !important;
+        }
+        div[data-baseweb="popover"] *,
+        ul[data-baseweb="menu"] * {
+            color: #10192E !important;
+        }
+        div[data-baseweb="popover"] li:hover,
+        ul[data-baseweb="menu"] li:hover {
+            background-color: #F0F0EE !important;
+        }
+
         div[data-testid="stAlert"] { border-radius: 10px; box-shadow: 0 1px 4px rgba(16,25,46,0.04); }
 
         /* ---------- FILE UPLOADER (drag-and-drop box) ----------
@@ -207,6 +223,20 @@ st.markdown("""
             background-color: #FFFFFF !important;
             border: 1px dashed #E9E7E0 !important;
             border-radius: 10px !important;
+        }
+        /* Broad safety net: the uploaded-file chip (filename + size) uses a
+           low-contrast style Streamlit doesn't expose through theme options,
+           so it stays unreadable even after the fixes above. Force it here. */
+        [data-testid="stFileUploader"] * {
+            color: #10192E !important;
+        }
+        [data-testid="stFileUploaderFile"] {
+            background-color: #FFFFFF !important;
+            border-radius: 8px !important;
+        }
+        [data-testid="stFileUploaderFile"] svg,
+        [data-testid="stFileUploaderDeleteBtn"] svg {
+            fill: #5B6478 !important;
         }
         [data-testid="stFileUploaderDropzone"] * {
             color: #10192E !important;
