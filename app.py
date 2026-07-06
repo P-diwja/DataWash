@@ -193,9 +193,8 @@ st.markdown("""
         div[data-baseweb="tab-border"] { background-color: #E9E7E0; }
 
         /* ---------- SELECT / CHECKBOX polish ---------- */
-        div[data-baseweb="select"] > div { border-radius: 8px; border-color: #E9E7E0; color: white !important; }
-div[data-baseweb="select"] span { color: white !important; }
-div[data-baseweb="select"] > div:focus-within { border-color: #1B8A7A; box-shadow: 0 0 0 1px #1B8A7A; }
+        div[data-baseweb="select"] > div { border-radius: 8px; border-color: #E9E7E0; }
+        div[data-baseweb="select"] > div:focus-within { border-color: #1B8A7A; box-shadow: 0 0 0 1px #1B8A7A; }
 
         /* Dropdown option lists (selectbox/multiselect) render in an overlay
            outside the main app container, so the .stApp-scoped rules above
