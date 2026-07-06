@@ -205,7 +205,7 @@ st.markdown("""
         }
         div[data-baseweb="popover"] *,
         ul[data-baseweb="menu"] * {
-            color: #10192E !important;
+            color: #ffffff !important;
         }
         div[data-baseweb="popover"] li:hover,
         ul[data-baseweb="menu"] li:hover {
