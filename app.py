@@ -71,54 +71,9 @@ st.markdown("""
         */
 
         html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
-
-        /* ---------- FORCE LIGHT THEME REGARDLESS OF BROWSER/OS DARK MODE ----------
-           Root cause of the "invisible text" bug: this app hardcodes light
-           backgrounds (white cards, light page bg) but never forced a text
-           color for Streamlit's own generic elements (widget labels, plain
-           markdown, dataframe headers, alerts, etc). Those elements read
-           Streamlit's theme CSS variables, so when a visitor's browser/OS is
-           set to dark mode (or they pick "Dark" in the app's Settings menu),
-           Streamlit swaps text to a light color while our CSS keeps the
-           backgrounds light -> light text on light background = invisible.
-           Setting the variables below, plus the safety-net rules further
-           down, keeps everything readable no matter the visitor's theme. */
-        :root, html, body, .stApp {
-            --text-color: #10192E !important;
-            --background-color: #F7F7F5 !important;
-            --secondary-background-color: #FFFFFF !important;
-            --primary-color: #1B8A7A !important;
-        }
-        .stApp { background-color: #F7F7F5; color: #10192E; }
+        .stApp { background-color: #F7F7F5; }
         #MainMenu, header, footer { visibility: hidden; }
         .block-container { padding-top: 1.5rem; max-width: 1100px; }
-
-        /* Safety net: force a readable ink color on generic Streamlit text
-           elements that don't pick up the CSS variables above reliably.
-           This is intentionally low-specificity so every hardcoded color
-           already in this stylesheet (e.g. white button/masthead text)
-           still wins where it's meant to. */
-        .stApp p, .stApp span, .stApp li, .stApp label,
-        [data-testid="stMarkdownContainer"],
-        [data-testid="stMarkdownContainer"] p,
-        [data-testid="stWidgetLabel"] p,
-        [data-testid="stCaptionContainer"],
-        [data-testid="stCaptionContainer"] p,
-        [data-testid="stText"],
-        [data-testid="stAlert"] p,
-        [data-testid="stExpanderDetails"] p,
-        h1, h2, h3, h4, h5, h6 {
-            color: #10192E;
-        }
-        section[data-testid="stSidebar"] * { color: #10192E; }
-        /* Re-assert intentionally light/white text that must stay light on
-           dark backgrounds, so the safety net above never swallows these. */
-        .masthead-mark { color: #FFFFFF !important; }
-        .masthead-mark span { color: #4DD9C0 !important; }
-        .masthead-tag, .masthead-sub { color: #B8C2D4 !important; }
-        .stButton button, .stButton button *,
-        .stDownloadButton button, .stDownloadButton button * { color: #FFFFFF !important; }
-        .stage-number { color: #FFFFFF !important; }
 
         /* ---------- HERO BAND ---------- */
         .hero-band {
@@ -159,7 +114,7 @@ st.markdown("""
 
         /* ---------- BUTTONS ---------- */
         .stButton button, .stDownloadButton button { background-color: #10192E; color: white; border-radius: 8px; border: none; font-family: 'Inter', sans-serif; font-weight: 600; padding: 10px 22px; box-shadow: 0 2px 6px rgba(16,25,46,0.15); transition: all 0.15s ease; }
-        .stButton button:hover, .stDownloadButton button:hover { background-color: #1B8A7A; color: white; box-shadow: 0 4px 12px rgba(27,138,122,0.28); transform: translateY(-1px); }
+        .stButton button:hover, .stDownloadButton button:hover { background-color: #14685C; color: white; box-shadow: 0 4px 12px rgba(27,138,122,0.28); transform: translateY(-1px); }
 
         /* ---------- RECOMMENDATION CARDS (for column/row drop suggestions) ---------- */
         .recommend-card { background-color: #FFF9F0; border: 1px solid #F0D9AE; border-left: 3px solid #E8A33D; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; font-size: 14px; color: #10192E; }
@@ -168,7 +123,7 @@ st.markdown("""
         /* ---------- INSIGHT CARDS ---------- */
         .insight-card { background-color: #FFFFFF; border: 1px solid #E9E7E0; border-left: 3px solid #E8A33D; border-radius: 10px; padding: 13px 18px; margin-bottom: 9px; font-size: 14.5px; color: #10192E; display: flex; gap: 12px; align-items: center; box-shadow: 0 1px 4px rgba(16,25,46,0.04); transition: box-shadow 0.15s ease; }
         .insight-card:hover { box-shadow: 0 4px 12px rgba(16,25,46,0.08); }
-        .insight-tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; text-transform: uppercase; color: #E8A33D; white-space: nowrap; }
+        .insight-tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; text-transform: uppercase; color: #9C6318; white-space: nowrap; }
 
         /* ---------- DASHBOARD CHART CARDS ---------- */
         .dash-card-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6478; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -196,73 +151,7 @@ st.markdown("""
         div[data-baseweb="select"] > div { border-radius: 8px; border-color: #E9E7E0; }
         div[data-baseweb="select"] > div:focus-within { border-color: #1B8A7A; box-shadow: 0 0 0 1px #1B8A7A; }
 
-        /* Dropdown option lists (selectbox/multiselect) render in an overlay
-           outside the main app container, so the .stApp-scoped rules above
-           never reach them. Force them explicitly here. */
-        div[data-baseweb="popover"],
-        ul[data-baseweb="menu"] {
-            background-color: #FFFFFF !important;
-        }
-        div[data-baseweb="popover"] *,
-        ul[data-baseweb="menu"] * {
-            color: #10192E !important;
-        }
-        div[data-baseweb="popover"] li:hover,
-        ul[data-baseweb="menu"] li:hover {
-            background-color: #F0F0EE !important;
-        }
-
         div[data-testid="stAlert"] { border-radius: 10px; box-shadow: 0 1px 4px rgba(16,25,46,0.04); }
-
-        /* ---------- FILE UPLOADER (drag-and-drop box) ----------
-           This widget renders its own dark dropzone by default and was not
-           covered by the earlier text-color fix, leaving "Browse files" and
-           the size/type caption invisible (dark text on a dark box). Force
-           it to match the rest of the app's light card style. */
-        [data-testid="stFileUploaderDropzone"] {
-            background-color: #FFFFFF !important;
-            border: 1px dashed #E9E7E0 !important;
-            border-radius: 10px !important;
-        }
-        /* Broad safety net: the uploaded-file chip (filename + size) uses a
-           low-contrast style Streamlit doesn't expose through theme options,
-           so it stays unreadable even after the fixes above. Force it here. */
-        [data-testid="stFileUploader"] * {
-            color: #10192E !important;
-        }
-        [data-testid="stFileUploaderFile"] {
-            background-color: #FFFFFF !important;
-            border-radius: 8px !important;
-        }
-        [data-testid="stFileUploaderFile"] svg,
-        [data-testid="stFileUploaderDeleteBtn"] svg {
-            fill: #5B6478 !important;
-        }
-        [data-testid="stFileUploaderDropzone"] * {
-            color: #10192E !important;
-        }
-        [data-testid="stFileUploaderDropzone"] svg {
-            fill: #5B6478 !important;
-        }
-        [data-testid="stFileUploaderDropzone"] button,
-        [data-testid="stFileUploaderDropzone"] button * ,
-        [data-testid="stFileUploaderDropzone"] button svg {
-            background-color: #10192E !important;
-            color: #FFFFFF !important;
-            fill: #FFFFFF !important;
-            border: none !important;
-        }
-        [data-testid="stFileUploaderDropzone"] button:hover,
-        [data-testid="stFileUploaderDropzone"] button:hover * ,
-        [data-testid="stFileUploaderDropzone"] button:hover svg {
-            background-color: #1B8A7A !important;
-            color: #FFFFFF !important;
-            fill: #FFFFFF !important;
-        }
-        [data-testid="stFileUploaderFileName"],
-        [data-testid="stFileUploaderFileName"] * {
-            color: #10192E !important;
-        }
     </style>
 """, unsafe_allow_html=True)
 
