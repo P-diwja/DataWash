@@ -25,7 +25,7 @@ import plotly.graph_objects as go
 
 # ---- Shared theme values, matching the app's CSS palette ----
 INK_NAVY = "#10192E"
-SIGNAL_AMBER = "#E8A33D"
+SIGNAL_AMBER = "#9C6318"  # darkened from #E8A33D - original failed WCAG 3:1 minimum against white chart background
 CIRCUIT_TEAL = "#1B8A7A"
 ALERT_CORAL = "#E85D4E"
 SLATE = "#5B6478"
@@ -35,12 +35,32 @@ MUTED_BLUE = "#4A7A93"
 # A base layout style reused across every chart for visual consistency.
 # Font family is intentionally plain/universal (see note above) so charts
 # render identically on-screen and in exported PNG images.
+#
+# Text hierarchy (all contrast ratios verified against WCAG AA, min 4.5:1):
+#   Chart title   -> INK_NAVY, 17px  (ratio 17.5:1 - darkest, most prominent)
+#   Axis titles   -> INK_NAVY, 13px  (same color as title, smaller size only -
+#                    "lighter" hierarchy is expressed through size, not a
+#                    lower-contrast color, since that would risk failing AA)
+#   Tick labels   -> SLATE, 12px     (ratio 5.9:1 - readable dark gray,
+#                    distinct from title/axis-title without sacrificing contrast)
+#   Legend text   -> SLATE, 12px     (same reasoning as tick labels)
+#   Grid lines    -> #eef0f4         (intentionally light - structure, not content)
 BASE_LAYOUT = dict(
-    font=dict(family="Arial, sans-serif", color=INK_NAVY, size=13),
+    font=dict(family="Arial, sans-serif", color=SLATE, size=12),
     title_font=dict(family="Arial, sans-serif", size=17, color=INK_NAVY),
+    legend=dict(font=dict(family="Arial, sans-serif", color=SLATE, size=12)),
     plot_bgcolor="white",
     paper_bgcolor="white",
     margin=dict(l=50, r=40, t=65, b=45),
+)
+
+# Shared axis styling applied on top of BASE_LAYOUT via update_xaxes/update_yaxes -
+# explicit tickfont + title font colors so hierarchy holds regardless of any
+# library default, on every chart type, every time.
+AXIS_STYLE = dict(
+    tickfont=dict(color=SLATE, size=12, family="Arial, sans-serif"),
+    title_font=dict(color=INK_NAVY, size=13, family="Arial, sans-serif"),
+    automargin=True,
 )
 
 
@@ -59,8 +79,8 @@ def plot_numeric_column(df, column):
     # automargin=True tells Plotly to measure the actual rendered text and
     # expand the margin if needed, instead of trusting our fixed guess -
     # this is what prevents titles/labels from ever getting clipped.
-    fig.update_xaxes(gridcolor="#eef0f4", automargin=True)
-    fig.update_yaxes(gridcolor="#eef0f4", automargin=True)
+    fig.update_xaxes(gridcolor="#eef0f4", tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
+    fig.update_yaxes(gridcolor="#eef0f4", tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
     return fig
 
 
@@ -141,8 +161,8 @@ def plot_categorical_column(df, column, top_n=15, search_term=None):
     # names (which can be long, like job titles) directly on the y-axis, and
     # value labels just past the bar end on the x-axis. Both need room that
     # depends on the actual text, not a fixed guess.
-    fig.update_xaxes(gridcolor="#eef0f4", automargin=True)
-    fig.update_yaxes(gridcolor="white", automargin=True)
+    fig.update_xaxes(gridcolor="#eef0f4", tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
+    fig.update_yaxes(gridcolor="white", tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
     return fig
 
 
@@ -161,8 +181,8 @@ def plot_timeseries(df, date_column, numeric_column):
         title=f"{numeric_column} over time",
         **BASE_LAYOUT
     )
-    fig.update_xaxes(gridcolor="#eef0f4", automargin=True)
-    fig.update_yaxes(gridcolor="#eef0f4", automargin=True)
+    fig.update_xaxes(gridcolor="#eef0f4", tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
+    fig.update_yaxes(gridcolor="#eef0f4", tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
     return fig
 
 
@@ -175,10 +195,13 @@ def plot_correlation_heatmap(df, numeric_columns):
     """
     corr_matrix = df[numeric_columns].corr()
 
+    # Teal endpoint is lightened from the brand CIRCUIT_TEAL specifically
+    # here - the navy cell-number text on top needs 4.5:1 contrast even at
+    # the strongest correlation values, which full-strength CIRCUIT_TEAL fails.
     custom_scale = [
         [0.0, ALERT_CORAL],
         [0.5, "#f5f2ea"],
-        [1.0, CIRCUIT_TEAL],
+        [1.0, "#3DB5A1"],
     ]
 
     fig = px.imshow(
@@ -191,8 +214,8 @@ def plot_correlation_heatmap(df, numeric_columns):
         title="Correlation Heatmap - how numeric columns relate to each other",
         **BASE_LAYOUT
     )
-    fig.update_xaxes(automargin=True)
-    fig.update_yaxes(automargin=True)
+    fig.update_xaxes(tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
+    fig.update_yaxes(tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
     return fig
 
 
@@ -235,8 +258,8 @@ def plot_grouped_comparison(grouped_df, group_column, value_label):
         yaxis_title="",
         **BASE_LAYOUT
     )
-    fig.update_xaxes(gridcolor="#eef0f4", automargin=True)
-    fig.update_yaxes(gridcolor="white", automargin=True)
+    fig.update_xaxes(gridcolor="#eef0f4", tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
+    fig.update_yaxes(gridcolor="white", tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
     return fig
 
 
@@ -274,8 +297,8 @@ def plot_scatter(df, x_column, y_column, color_column=None):
         title=title,
         **BASE_LAYOUT
     )
-    fig.update_xaxes(gridcolor="#eef0f4", automargin=True)
-    fig.update_yaxes(gridcolor="#eef0f4", automargin=True)
+    fig.update_xaxes(gridcolor="#eef0f4", tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
+    fig.update_yaxes(gridcolor="#eef0f4", tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
     return fig
 
 
@@ -319,6 +342,6 @@ def plot_boxplot(df, numeric_column, group_column=None, top_n=12):
         title=title,
         **BASE_LAYOUT
     )
-    fig.update_xaxes(gridcolor="#eef0f4", automargin=True)
-    fig.update_yaxes(gridcolor="#eef0f4", automargin=True)
+    fig.update_xaxes(gridcolor="#eef0f4", tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
+    fig.update_yaxes(gridcolor="#eef0f4", tickfont=dict(color=SLATE, size=12), title_font=dict(color=INK_NAVY, size=13), automargin=True)
     return fig
