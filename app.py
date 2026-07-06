@@ -239,7 +239,7 @@ st.markdown("""
             fill: #5B6478 !important;
         }
         [data-testid="stFileUploaderDropzone"] * {
-            color: #f6f8ff !important;
+            color: #010202 !important;
         }
         [data-testid="stFileUploaderDropzone"] svg {
             fill: #5B6478 !important;
