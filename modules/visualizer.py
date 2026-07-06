@@ -25,7 +25,7 @@ import plotly.graph_objects as go
 
 # ---- Shared theme values, matching the app's CSS palette ----
 INK_NAVY = "#10192E"
-SIGNAL_AMBER = "#E8A33D"
+SIGNAL_AMBER = "#9C6318"  # darkened from #E8A33D - original failed WCAG 3:1 minimum against white chart background
 CIRCUIT_TEAL = "#1B8A7A"
 ALERT_CORAL = "#E85D4E"
 SLATE = "#5B6478"
@@ -175,10 +175,13 @@ def plot_correlation_heatmap(df, numeric_columns):
     """
     corr_matrix = df[numeric_columns].corr()
 
+    # Teal endpoint is lightened from the brand CIRCUIT_TEAL specifically
+    # here - the navy cell-number text on top needs 4.5:1 contrast even at
+    # the strongest correlation values, which full-strength CIRCUIT_TEAL fails.
     custom_scale = [
         [0.0, ALERT_CORAL],
         [0.5, "#f5f2ea"],
-        [1.0, CIRCUIT_TEAL],
+        [1.0, "#3DB5A1"],
     ]
 
     fig = px.imshow(
