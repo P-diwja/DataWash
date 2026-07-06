@@ -228,7 +228,7 @@ st.markdown("""
            low-contrast style Streamlit doesn't expose through theme options,
            so it stays unreadable even after the fixes above. Force it here. */
         [data-testid="stFileUploader"] * {
-            color:  #10192E !important;
+            color:  #010202 !important;
         }
         [data-testid="stFileUploaderFile"] {
             background-color: #FFFFFF !important;
